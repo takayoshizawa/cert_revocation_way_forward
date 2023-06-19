@@ -1,13 +1,3 @@
-# Authors:
-#   Trevor Perrin
-#   Google - handling CertificateRequest.certificate_types
-#   Google (adapted by Sam Rushing and Marcelo Fernandez) - NPN support
-#   Dimitris Moraitis - Anon ciphersuites
-#   Yngve Pettersen (ported by Paul Sokolovsky) - TLS 1.2
-#   Hubert Kario - 'extensions' cleanup
-#
-# See the LICENSE file for legal information regarding use of this file.
-#
 # -------------------- 
 #   Modified clientHello and serverHello to insert additional information in the TLS1.3
 #   handshake to simulate the new approach as described in our paper.
