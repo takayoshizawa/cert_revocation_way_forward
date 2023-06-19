@@ -12,7 +12,6 @@
 # See the LICENSE file for legal information regarding use of this file.
 #
 # -------------------- 
-# 25,30/5/2023 Taka Yoshizawa
 #   Modified clientHello and serverHello to insert additional information in the TLS1.3
 #   handshake to simulate the new approach as described in our paper.
 #
