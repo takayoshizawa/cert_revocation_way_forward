@@ -19,12 +19,14 @@ The high-level description of the modifications in these two files:
      Sending clientHello message
       - generate a 4-byte client ID (a fixed value) and a 16-byte random number (the random number is sent in the 2nd time onward only).
       - insert these two values in the clientHello message and send it to the TLS server.
+    
+   1.b) client-side processing:
     Receiving serverHello message
       - extract the client key and store it (when only the cleint key is present in serverHello message).
       - calculate the expected response value.
       - extract the response and check against the expected response value. If they match, declare success and continue with the TLS session establishment. Otherwise, declare failure.
         
-   1.b) server-side processing
+   1.c) server-side processing
      Receiving cleintHello message
       - extract the client ID and random number received in the clientHello message.
       - if the random number is not included in the cleintHello message (i.e. 1st access from this client), generate only a 16-byte client-specific client key.
