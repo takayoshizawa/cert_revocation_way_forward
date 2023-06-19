@@ -2,7 +2,7 @@
 TLS server certificate revocation improvement
 
 The code files in this repository are provided as a supplemental information for the paper "Certicate Revocation  Is there A Way Forward?"
-These code files represent incremental changes on top of the "tlslist-ng" (https://github.com/tlsfuzzer/tlslite-ng) to include additional information and corresponding logic that are discussed in the above-mentioned paper. 
+These code files represent incremental changes on top of the "tlslist-ng" (https://github.com/tlsfuzzer/tlslite-ng) to include additional information in clientHello and serverHello messages and corresponding logic that are discussed in the above-mentioned paper. 
 
 For the rest of this document, we refer to the codes in "tlslite-ng" as the "baseline."
 
