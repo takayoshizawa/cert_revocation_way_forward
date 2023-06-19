@@ -14,6 +14,7 @@ The most straightforward way to see exactly what the changs are from the "baseli
 
 The high-level description of the modifications in these two files:
 1. tlsconnection.py
+   
    1.a) client-side processing:
      Sending clientHello message
       - generate a 4-byte client ID (a fixed value) and a 16-byte random number (the random number is sent in the 2nd time onward only).
@@ -22,6 +23,7 @@ The high-level description of the modifications in these two files:
       - extract the client key and store it (when only the cleint key is present in serverHello message).
       - calculate the expected response value.
       - extract the response and check against the expected response value. If they match, declare success and continue with the TLS session establishment. Otherwise, declare failure.
+        
    1.b) server-side processing
      Receiving cleintHello message
       - extract the client ID and random number received in the clientHello message.
@@ -30,7 +32,7 @@ The high-level description of the modifications in these two files:
       - insert the client-specific client key and a response (if the random number is included in the clientHello message) to the serverHello message.
       - send the serverHello message.
         
-2. messages.py
+3. messages.py
    Message handling routines for clientHello and serverHello message mentioned above.
 
 --- end of the note ---
